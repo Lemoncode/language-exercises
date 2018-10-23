@@ -5,7 +5,7 @@
 // el tiempo indicado por el usuario.
 
 class Reminder {
-  constructor(text, delay) {
+  constructor(text) {
     this.text = text;
   }
 
