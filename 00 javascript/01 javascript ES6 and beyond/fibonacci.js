@@ -17,16 +17,4 @@
 // TIP: También se puede abordar con recursividad, pero buscamos una solución
 // iterativa para hacer uso de destructuring con múltiples asignaciones.
 
-const fib = (n) => {
-  let current = 1;
-  let last = 0;
-
-  if ( n < 0 ) return NaN;
-  if ( n <= 1 ) return n;
-
-  for ( let i = 1; i < n; i++ ) {
-      [current, last] = [current + last, current];
-  }
-
-  return current;
-}
+const fib = (n) => { /* Implementation here*/ }
