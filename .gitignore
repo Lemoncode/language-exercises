@@ -1,3 +1,4 @@
 *.sol.js
+*.sol.ts
 *.xlsx
 .DS_Store
