@@ -8,7 +8,18 @@
 // Puedes usar la función Number.prototype.toPrecision(3) para reducir el número de decimales de la media de calificaciones
 // a tres números.
 
-const students = [
+interface Student {
+  name: string;
+  califications: number[];
+}
+
+interface StudentSummary {
+  name: string;
+  highestCalification: number;
+  averageCalifications: number;
+}
+
+const students: Student[] = [
   { name: 'Juan', califications: [1.56, 2.13, 7.53, 9.71, 2.67, 2.43, 2.86, 9.42, 8.08, 7.34] },
   { name: 'Álvaro', califications: [4.49, 1.52, 7.00, 8.30, 8.01, 6.45, 3.72, 3.27, 6.99, 6.01] },
   { name: 'María', califications: [2.99, 7.33, 1.14, 3.26, 0.98, 2.94, 4.99, 4.51, 1.80, 9.30] },
@@ -16,9 +27,12 @@ const students = [
   { name: 'Mónica', califications: [9.72, 6.07, 1.11, 4.72, 0.04, 1.56, 0.66, 3.87, 6.97, 9.48] },
 ];
 
-const summarizeClassRoom = (studentList) => {
-  // Implementation here
-};
+const mean = (list:  number[]):number => list.reduce((total, next) => total + next) / list.length;
+const summarizeClassRoom = (studentList: Student[]): StudentSummary[] => studentList.map(({name, califications}) => ({
+  name,
+  highestCalification: Math.max(...califications),
+  averageCalifications: Number(mean(califications).toPrecision(3)),
+}));
 
 console.log(summarizeClassRoom(students));
 // [

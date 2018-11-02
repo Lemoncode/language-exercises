@@ -1,11 +1,9 @@
+// --- EJERCICIO ------------------------------------------------------------------------
 
-// 1) FORMDATA
-// En un formulario tenemos una entidad User con los campos name, surname y age. Crea una función "set"
-// que reciba un objeto de dicha entidad, el nombre de una propiedad y su valor y actualice la propiedad de objeto
+// En un formulario tenemos un objeto con los campos name, surname y age que representan un usuario. Crea una función "set"
+// que reciba un objeto con los campos de usuario, el nombre de una propiedad y su valor y actualice la propiedad de objeto
 // con el valor pasado como argumento. El ejercicio debe de seguir las siguientes normas:
 // 1. La función debe ser pura, es decir, debe crear un nuevo objeto sin modificar el existente.
-// 2. La entidad User no puede ser creada mediante clases.
-// 3. La función deberá estar tipada (argumentos y valor resultado). No se permite el uso de "any".
 
 const julia = { name: 'Julia', surname: 'Álvarez', age: 19 };
 const updatedJulia = set(julia, 'age', 25);
@@ -13,7 +11,9 @@ console.log(updatedJulia); // { name: 'Julia', surname: 'Álvarez', age: 25 }
 console.log(julia); // { name: 'Julia', surname: 'Álvarez', age: 19 }
 console.log(julia === updatedJulia); // false
 
-// [OPCIONAL]
+
+// --- OPCIONAL ------------------------------------------------------------------------
+
 // Currifica dicha función para que permita crear funciones donde el argumento del nombre de la propiedad
 // esté configurado previamente.
 // Es decir, modifica la función "set" para poder crear "setName", "setSurname" y "setAge" que reciban sólo
