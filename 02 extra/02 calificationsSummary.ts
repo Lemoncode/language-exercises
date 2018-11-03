@@ -28,10 +28,3 @@ console.log(summarizeClassRoom(students));
 //   { name: 'Jorge', highestCalification: 9.07, averageCalifications: '5.38' },
 //   { name: 'Mónica', highestCalification: 9.72, averageCalifications: '4.42' }
 // ]
-
-const mean = list => list.reduce((total, next) => total + next) / list.length;
-const summarizeClassRoom = (studentList) => studentList.map(({name, califications}) => ({
-  name,
-  highestCalification: Math.max(...califications),
-  averageCalifications: mean(califications).toPrecision(3),
-}));
