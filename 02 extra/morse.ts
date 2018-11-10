@@ -19,7 +19,7 @@
 // la entidad transmisor podrá ser objeto o clase, como prefieras.
 // Esta factoría necesita una serie de "ingredientes" para configurar el transmisor:
 // - Un mapa que traduzca de carácter a su representación morse. Sírvete del objeto
-// auxiliar 'alphabet' que se adjunta más abajo.
+// auxiliar 'morseAlphabet' que se adjunta más abajo.
 // - Una función que implemente un mecanismo de timeout para espaciar los símbolos a
 // transmitir. Este mecanismo será como un setTimeout con la diferencia de que en lugar de
 // tomar milisegundos como entrada, será el número de puntos a esperar. Un punto, como
@@ -43,7 +43,7 @@
 // - La separación entre palabras es de 7 puntos.
 
 
-// Más infor sobre el código Morse:
+// Más info sobre el código Morse:
 // https://en.wikipedia.org/wiki/Morse_code
 
 
