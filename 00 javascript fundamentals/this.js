@@ -1,6 +1,7 @@
 // --- EJERCICIO ------------------------------------------------------------------------
 
-// ¿Qué sale en cada log en consola en el siguiente código?
+// ¿Cual es la salida de los logs en el siguiente código?
+// Intenta razonar, no ejecutes la solución.
 
 var surname = "Pérez";
 var person = {

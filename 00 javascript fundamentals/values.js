@@ -10,7 +10,10 @@ function values(obj) {
 // Ejemplo:
 console.log(values({ id: 31, duration: 310, name: "long video", format: "mp4" })); // [31, 310, "long video", "mp4"]
 
-// Challenge: Evita añadir las propiedades heredadas en caso de ser instancia de una clase:
+
+// --- CHALLENGE ------------------------------------------------------------------------
+
+// Evita añadir las propiedades heredadas en caso de ser instancia de una clase:
 // Ejemplo:
 function Person(name) {
   this.name = name

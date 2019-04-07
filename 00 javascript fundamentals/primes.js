@@ -19,14 +19,18 @@ function showPrimes(from, to) {
 
 // Utiliza la función para explorar todos los primos hasta el 100.
 
-// TIP: Puedes crearte una función auxiliar para saber si un número es primo o no, y 
+// TIP: Puedes crearte una función auxiliar para saber si un número es primo o no, y
 // utilizarla en tu función principal. Es buena práctica crear funciones auxiliares
 // que hagan una sola cosa (principio de única responsabilidad).
 
 
-// --- MEJORA ------------------------------------------------------------------------
+// --- CHALLENGE ------------------------------------------------------------------------
 
 // Se puede mejorar mucho el rendimiento del ejercicio anterior.
 // Al buscar si un numero es primo, podemos dejar de comprobar
 // si es divisible por cada entero mayor que uno una vez alcancemos
 // la raiz cuadrada de dicho número.
+
+// TIP: Explora en la documentación todas las funciones matemáticas que nos
+// ofrece JavaScript mediante el interfaz Math:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math

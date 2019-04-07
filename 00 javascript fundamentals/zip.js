@@ -13,7 +13,8 @@ function zipObject(keys, values) {
 console.log(zipObject(["spanish", "english", "french"], ["hola", "hi", "salut"])) // {spanish: "hola", english: "hi", french: "salut"}
 
 
-// Challenge: Si no hay valores suficientes para todas las claves evita que aparezcan como undefined
+// --- CHALLENGE ------------------------------------------------------------------------
+// Si no hay valores suficientes para todas las claves evita que aparezcan como undefined
 
 // Ejemplo:
 console.log(zipObject(["spanish", "english", "french"], ["hola"])) // {spanish: "hola"}
