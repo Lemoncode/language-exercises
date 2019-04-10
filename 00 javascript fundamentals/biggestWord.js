@@ -14,4 +14,4 @@ function biggestWord(phrase) {
 
 // Ejemplo
 console.log(biggestWord("Esta frase puede contener muchas palabras")); // "contener"
-console.log(biggestWord("Ejercicios básicos de JavaScript")); // "JavaScript"
+console.log(biggestWord("Ejercicios básicos de JavaScript")); // "Ejercicios"
