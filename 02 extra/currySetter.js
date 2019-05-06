@@ -18,7 +18,7 @@ console.log(julia === updatedJulia); // false
 // esté configurado previamente.
 // Es decir, modifica la función "set" para poder crear "setName", "setSurname" y "setAge" que reciban sólo
 // el objeto y el valor y sepan qué propiedad actualizar.
-// Si quieres puedes extraer la firma de la interfaz sin ponerla en línea con la implementación.
+// (Para TS) Si quieres puedes extraer la firma de la interfaz sin ponerla en línea con la implementación.
 
 const setName = set(/* ... */);
 const setSurName = set(/* ... */);
