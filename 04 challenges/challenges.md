@@ -22,11 +22,39 @@ quedaría aplanado como:
 
 ¿Has resuelto el ejercicio anterior? Suponiendo que los arrays multidimensionales del ejercicio anterior no serán de naturaleza mixta, es decir, sus elementos siempre serán del mismo tipo ¿Serías capaz de proporcionar un tipado adecuado a dicha función de aplanamiento?
 
-### 2. Árbol
+### 2. Acceso en profundidad
+
+Implementa un mecanismo para acceder en profundidad a objetos anidados, de modo que podamos recuperar una propiedad en cualquiera de sus nivel. Mira a continuación el comportamiento que debería seguir:
+
+```js
+const myObject = {
+  a: 1,
+  b: {
+    c: null,
+    d: {
+      e: 3,
+      f: {
+        g: "bingo",
+      }
+    }
+  }
+};
+
+const deepGet = ¿..?
+
+console.log(deepGet(myObject, "x")); // undefined
+console.log(deepGet(myObject, "a")); // 1
+console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
+console.log(deepGet(myObject, "b", "c")); // null
+console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
+console.log(deepGet(myObject));  // {a: 1, b: {...}}
+```
+
+### 3. Árbol
 
 ¿Cómo generarías con TypeScript un tipado para estructuras en forma de árbol? Un árbol es una estructura que parte de un nodo raiz, a partir del cual salen más nodos. Cada nodo en un árbol puede tener hijos (más nodos) o no tenerlos (convirtiendose en un nodo final o una "hoja").
 
-### 3. Trazas por consola
+### 4. Trazas por consola
 
 Ejecuta el siguiente código:
 
@@ -68,11 +96,11 @@ Pero para ello **tan solo podrás modificar la función `run`**.
 
 Queda prohibido modificar cualquier otro código asi como el contenido de `triggers`.
 
-### 4. Memoization
+### 5. Memoization
 
 #### Apartado A
 
-Implementa un mecanismo de 'memoization' para funciones costosas y tipalo con TypeScript. La memoización optimiza sucesivas llamadas del siguiente modo:
+Implementa un mecanismo de *memoización* para funciones costosas y tipalo con TypeScript. La memoización optimiza sucesivas llamadas del siguiente modo:
 
 ```js
 const expensiveFunction = () => {
@@ -87,6 +115,8 @@ console.log(memoized()); // Una única llamada // 3.1415
 console.log(memoized()); // 3.1415
 console.log(memoized()); // 3.1415
 ```
+
+NOTA: Puedes suponer que las funciones que van a ser memoizadas no llevan argumentos y tampoco devuelven valores `null` o `undefined`.
 
 #### Apartado B
 
