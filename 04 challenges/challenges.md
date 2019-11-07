@@ -24,7 +24,9 @@ quedaría aplanado como:
 
 ### 2. Acceso en profundidad
 
-Implementa un mecanismo para acceder en profundidad a objetos anidados, de modo que podamos recuperar una propiedad en cualquiera de sus nivel. Mira a continuación el comportamiento que debería seguir:
+#### Apartado A
+
+Implementa un mecanismo `deepGet` para acceder en profundidad a objetos anidados, de modo que podamos recuperar una propiedad en cualquiera de sus niveles. Mira a continuación el comportamiento que debería seguir:
 
 ```js
 const myObject = {
@@ -48,6 +50,25 @@ console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
 console.log(deepGet(myObject, "b", "c")); // null
 console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
 console.log(deepGet(myObject));  // {a: 1, b: {...}}
+```
+
+#### Apartado B
+
+Ahora implementa el complementario, `deepSet`, que permita guardar valores en profundidad. Su comportamiento debería ser:
+
+```js
+const myObject = {};
+
+const deepSet = ¿..?
+
+deepSet(1, myObject, "a", "b");
+console.log(JSON.stringify(myObject));  // {a: { b: 1}}
+deepSet(2, myObject, "a", "c");
+console.log(JSON.stringify(myObject));  // {a: { b: 1, c: 2}}
+deepSet(3, myObject, "a");
+console.log(JSON.stringify(myObject));  // {a: 3}
+deepSet(4, myObject);
+console.log(JSON.stringify(myObject));  // Do nothing // {a: 3}
 ```
 
 ### 3. Árbol
@@ -121,3 +142,23 @@ NOTA: Puedes suponer que las funciones que van a ser memoizadas no llevan argume
 #### Apartado B
 
 ¿Podrías hacerlo en una sola línea?
+
+#### Apartado C
+
+Contempla ahora la posibilidad de que la función a memoizar pueda tener argumentos. Por simplicidad supongamos sólo argumentos primitivos: `string`, `number` o `boolean` y que no sean `undefined`. ¿Podrías hacer una versión aceptando argumentos? ¿Cómo la tiparías con TS? Un ejemplo de comportamiento podría ser:
+
+```js
+let count = 0; // Comprobacion de nº de ejecuciones
+const repeatText = (repetitions: number, text: string): string =>
+  (count++, `${text} `.repeat(repetitions).trim())
+
+const memoize = ¿..?;
+
+const memoizedGreet = memoize(repeatText);
+
+console.log(memoizedGreet(1, "pam"));   // pam
+console.log(memoizedGreet(3, "chun"));  // chun chun chun
+console.log(memoizedGreet(1, "pam"));   // pam
+console.log(memoizedGreet(3, "chun"));  // chun chun chun
+console.log(count);                     // 2
+```
