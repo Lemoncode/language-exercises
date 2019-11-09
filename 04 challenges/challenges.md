@@ -87,7 +87,10 @@ const showMessage = async ([time, message]) => {
   console.log(message);
 };
 
-const triggers = [async () => await showMessage([200, "third"]), async () => await showMessage([100, "second"])];
+const triggers = [
+  async () => await showMessage([200, "third"]),
+  async () => await showMessage([100, "second"])
+];
 
 const run = triggers => {
   console.log("first");
