@@ -1,8 +1,8 @@
-// --- EJERCICIO ------------------------------------------------------------------------
+# This
 
-// ¿Cual es la salida de los logs en el siguiente código?
-// Intenta razonar, no ejecutes la solución.
+¿Cual es la salida de los logs en el siguiente código? Intenta razonar, no te limites a ejecutar la solución.
 
+```javascript
 var surname = "Pérez";
 var person = {
   name: "Juan",
@@ -20,3 +20,4 @@ console.log(person.wife.getSurname());
 var surnameFunction = person.wife.getSurname;
 console.log(surnameFunction());
 console.log(surnameFunction.call(person));
+```

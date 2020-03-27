@@ -1,8 +1,8 @@
-# Challenge
+# Morse
 
 Vamos a crear... ¡un transmisor Morse!
 
-## DESCRIPCIÓN
+## Descripción
 
 El ejercicio consiste en, dado cualquier mensaje de entrada, representar por consola el estado de las señales morse que resultan de transmitir dicho mensaje. Para facilitarte la tarea piensa en la típica bombilla de un transmisor morse:
 
@@ -12,7 +12,7 @@ El ejercicio consiste en, dado cualquier mensaje de entrada, representar por con
 
 Por tanto, la salida por consola será una sucesión de estados: `ON`/`OFF`, `Encendido`/`Apagado`, `1`/`0`, como prefieras.
 
-## IMPLEMENTACIÓN
+## Implementación
 
 Para ello tendremos que implementar una factoría de transmisores. Recuerda que una factoría es una función que devuelve un objeto o clase. Esa decisión es a tu,
 la entidad transmisor podrá ser objeto o clase, como prefieras. Esta factoría necesita una serie de "ingredientes" para configurar el transmisor:
@@ -26,7 +26,7 @@ la entidad transmisor podrá ser objeto o clase, como prefieras. Esta factoría 
 
 Utiliza Typescript y proporciona un tipado lo más completo posible.
 
-## TIMING
+## Timing
 
 La unidad temporal de referencia será la duración de 1 punto en lugar de trabajar en milisegundos. La duración real en ms. de dicho punto es a tu elección, puede ser de 50ms o de 1seg. si estás haciendo pruebas y quieres ir despacio. Dicho esto deberás saber que, en morse:
 
@@ -53,32 +53,32 @@ const morseAlphabet = {
   "7": "--...",
   "8": "---..",
   "9": "----.",
-  "a": ".-",
-  "b": "-...",
-  "c": "-.-.",
-  "d": "-..",
-  "e": ".",
-  "f": "..-.",
-  "g": "--.",
-  "h": "....",
-  "i": "..",
-  "j": ".---",
-  "k": "-.-",
-  "l": ".-..",
-  "m": "--",
-  "n": "-.",
-  "o": "---",
-  "p": ".--.",
-  "q": "--.-",
-  "r": ".-.",
-  "s": "...",
-  "t": "-",
-  "u": "..-",
-  "v": "...-",
-  "w": ".--",
-  "x": "-..-",
-  "y": "-.--",
-  "z": "--..",
+  a: ".-",
+  b: "-...",
+  c: "-.-.",
+  d: "-..",
+  e: ".",
+  f: "..-.",
+  g: "--.",
+  h: "....",
+  i: "..",
+  j: ".---",
+  k: "-.-",
+  l: ".-..",
+  m: "--",
+  n: "-.",
+  o: "---",
+  p: ".--.",
+  q: "--.-",
+  r: ".-.",
+  s: "...",
+  t: "-",
+  u: "..-",
+  v: "...-",
+  w: ".--",
+  x: "-..-",
+  y: "-.--",
+  z: "--..",
   ".": ".-.-.-",
   ",": "--..--",
   "?": "..--..",
@@ -87,6 +87,6 @@ const morseAlphabet = {
   "/": "-..-.",
   "@": ".--.-.",
   "(": "-.--.",
-  ")": "-.--.-"
-}
+  ")": "-.--.-",
+};
 ```
